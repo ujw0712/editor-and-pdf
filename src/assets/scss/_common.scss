@@ -192,6 +192,7 @@
 }
 
 .ProseMirror {
+	min-height: 80vh;
 	padding: 20px;
 	> * + * {
 		margin-top: 0.3em;

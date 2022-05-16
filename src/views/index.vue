@@ -1,6 +1,9 @@
 <template>
   <div class="page-title-box">
-    <div class="page-title">AAA</div>
+    <div class="page-title">Editor And Pdf
+      <button @click="pdf">PDF 다운로드</button>
+      <div class="contents-box-sub-title">에디터로 작성한 내용을 PDF파일로 다운로드하세요!</div>
+    </div>
   </div>
 
   <editor />
