@@ -1,0 +1,48 @@
+{
+  "name": "editor-and-pdf",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve --port 5050",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.0",
+    "@tiptap/extension-color": "^2.0.0-beta.9",
+    "@tiptap/extension-document": "^2.0.0-beta.15",
+    "@tiptap/extension-highlight": "^2.0.0-beta.33",
+    "@tiptap/extension-image": "^2.0.0-beta.27",
+    "@tiptap/extension-placeholder": "^2.0.0-beta.48",
+    "@tiptap/extension-text-align": "^2.0.0-beta.29",
+    "@tiptap/extension-text-style": "^2.0.0-beta.23",
+    "@tiptap/extension-typography": "^2.0.0-beta.20",
+    "@tiptap/starter-kit": "^2.0.0-beta.184",
+    "@tiptap/vue-3": "^2.0.0-beta.91",
+    "click-outside-vue3": "^4.0.1",
+    "core-js": "^3.6.5",
+    "prosemirror-state": "^1.3.4",
+    "prosemirror-view": "^1.23.13",
+    "socket.io": "^4.4.1",
+    "swagger": "^0.7.5",
+    "vue": "^3.2.33",
+    "vue-draggable-next": "^2.1.1",
+    "vue-html2pdf": "^1.8.0",
+    "vue-router": "^4.0.12",
+    "vue-socket.io": "^3.0.10",
+    "vue3-loading-overlay": "0.0.0",
+    "vuedraggable": "^4.1.0",
+    "vuemoji-picker": "^0.1.0",
+    "vuex": "^4.0.2"
+  },
+  "devDependencies": {
+    "@vue/cli-service": "^4.5.0",
+    "node-sass": "^6.0.1",
+    "sass-loader": "^10.2.0",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

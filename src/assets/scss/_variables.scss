@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+//Vars
+$assetPath : '~@/assets/img/';
+
+/* G : global */
+$G-fw-light : 300;
+$G-fw-regular : 400;
+$G-fw-medium : 500;
+$G-fw-bold : 700;
+
+// $G-color1 : #FF0000;
+$G-color1 : #C90000;
+$G-color1-over : #C90000;
+$G-color2 : #C90000;
+$G-color2-over : #C90000;
+/*$G-color1 : #ff693a;
+$G-color1-over : #ec5323;
+$G-color2 : #ff973c;
+$G-color2-over : #f58626;*/
+$G-color3 : #653bff;
+$G-color4 : #46d24b;
+$G-color5 : #e6e6e6;
+$G-color6 : #838383;
+$G-color7 : #8d8f92;
+$G-color8 : #424242;
+$G-color9 : #333333;
+$G-color10 : #808a94;
+$G-color11 : #aaa;
+$G-color12 : #666;
+
+$G-white : #fff;
+$G-white2 : #F4F4F4;
+$G-white3 : #eee;
+$G-white4 : #ccc;
+
+$G-success : #00ca0a;
+
+$G-kakao : #ffce09;
+$G-naver : #36ac37;
+$G-facebook : #3a5ca9;
+
+$G-line-color1 : #E6E6E6;
+$G-line-color2 : #b9b9b9;
+$G-line-color3 : #424242;
+
+$G-box-shadow : 0px 3px 13px rgba(0,0,0,0.11);
+$G-box-shadow2 : 0px 3px 13px rgba(0,0,0,0.2);
+$G-box-shadow3 : 0px 3px 5px rgba(0,0,0,0.2);
+$G-box-shadow4 : 0px 3px 5px rgba(204,205,208,0.1);
+
+
+
+
+@function safe-rgb($color) {
+    @return unquote("rgb(#{red($color)}, #{green($color)}, #{blue($color)})");
+}

@@ -1,0 +1,208 @@
+@charset "utf-8";
+
+/* reset */
+
+* {box-sizing: border-box;}
+
+
+/* ============================
+ * icon
+ * ----------------------------- */
+.icon-img {
+	width:100%;
+	&.icon-editor-img{@include icon-editor-img;}
+	&.icon-editor-bold{@include icon-editor-bold;}
+	&.icon-editor-italic{@include icon-editor-italic;}
+	&.icon-editor-strike{@include icon-editor-strike;}
+	&.icon-editor-under{@include icon-editor-under;}
+	&.icon-editor-highlight{@include icon-editor-highlight;}
+	&.icon-editor-left{@include icon-editor-left;}
+	&.icon-editor-center{@include icon-editor-center;}
+	&.icon-editor-right{@include icon-editor-right;}
+	&.icon-editor-link{@include icon-editor-link;}
+}
+
+.icon-link {
+	display:inline-block;
+	width:28px;
+	height:28px;
+	margin-left:10px;
+	vertical-align: middle;
+	background-size: 14px 14px;
+	background-color:$G-white3;
+	border-radius: 100%;
+	&:hover {
+		background-color:$G-white4;
+	}
+
+}
+
+
+/* ============================
+ * writP
+ * ----------------------------- */
+.editor-header {
+	padding:10px 0;
+	border-bottom:1px solid $G-line-color1;
+	display:flex;
+	align-items:center;
+	vertical-align: top;
+	[class*="editor-btn-"]{
+		margin:0 4px;
+		padding:5px;
+		cursor:pointer;
+		&:hover > div:not(.popupBox) {opacity:0.7;}
+	}
+	.editor-btn-img,
+	.editor-btn-link {
+		position:relative;
+		font-size:0;
+		.icon-img {width:22px; height:22px;}
+		.editor-link-input {
+			position:absolute;
+			top:calc(100% + 20px);
+			left:50%;
+			transform: translateX(-50%);
+			&::after{
+				position:absolute;
+				top:-11px; right:calc(50% - 6px);
+				// background: url(#{$assetPath}common/menu_arrow.png) no-repeat 50% 1px;
+				width:13px; height:11px;
+				content:'';
+
+			}
+		}
+
+	}
+
+	.editor-btn-text{
+		padding:0 12px;
+		font-size:16px;
+		&.on {
+			background:$G-color5;
+			border-radius:3px;
+		}
+	}
+	.editor-btn-font{
+		font-size:0;
+		.icon-img {width:17px; height:17px;}
+		&.on {
+			background:$G-color5;
+			border-radius:3px;
+		}
+	}
+	.editor-btn-color {
+		padding:5px;
+		font-size:0;
+		.color-box {
+			width:17px; height:17px;
+			border-radius:100%;
+		}
+	}
+	.link-bar {width:50px;}
+
+}
+
+
+.editor-content-box, .editor-content {
+	margin:20px 0;
+	position:relative;
+	background: #fff;
+	.tag-img-wrap img {width:100%;}
+
+	.editor-btn-img {
+		position:absolute;
+		right:calc(50% + 320px);
+		font-size:0;
+		padding:10px;
+		width:40px;
+		height:40px;
+		border-radius: 100%;
+		box-shadow: $G-box-shadow2;
+		cursor: pointer;
+		.icon-img {height:100%;}
+		&:hover .icon-img {opacity: 0.6;}
+		.tooltip {
+			position:absolute;
+			top:calc(100% + 15px); left:0;
+			font-size:13px; color:$G-white;
+			background:$G-color8;
+			white-space:nowrap;
+			padding:5px 12px;
+			border-radius: 4px;
+			box-shadow: $G-box-shadow2;
+			&::after {
+				position:absolute;
+				left:16px; top:-5px;
+				width:0; height:0;
+				border-bottom:5px solid $G-color8;
+				border-left:4px solid transparent;
+				border-right:4px solid transparent;
+				content:'';
+			}
+		}
+	}
+
+
+	.default-text {
+		font-size:15px;
+		color:$G-color7;
+		max-width:800px;
+		margin-right:auto;
+		margin-left:auto;
+	}
+
+	&::selection,
+	::selection { background:#FFC6C6; }
+
+	.content-text {
+		font-size:15px;
+		max-width:800px;
+		margin-right:auto;
+		margin-left:auto;
+	}
+	.content-text-subject {font-size:22px; font-weight:$G-fw-bold}
+	.content-text-link {
+		text-decoration: underline;
+		color:#1778ba;
+	}
+
+	.content-img-box {
+		position:relative;
+		display:inline-block;
+		left:50%;
+		transform: translateX(-50%);
+		.trash {
+			@include icon-trash($G-white);
+			background-color: rgba(0,0,0,0.6);
+			position:absolute;
+			bottom:25px; right:25px;
+			width:40px; height:40px;
+			background-size:20px 20px;
+			padding-top:0;
+			border-radius:3px;
+			cursor: pointer;
+			&:hover {
+				background-color: rgba(0,0,0,0.9);
+			}
+		}
+
+	}
+	img {max-width:100%; height:auto;}
+}
+
+.ProseMirror {
+	padding: 20px;
+	> * + * {
+		margin-top: 0.3em;
+	}
+	div, p, img {
+		&.ProseMirror-selectednode {
+			outline: 5px solid #ffe1d8;
+		}
+	}
+
+	&:focus {
+		outline: none;
+	}
+}
