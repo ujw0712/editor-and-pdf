@@ -4,7 +4,7 @@ import { jsPDF } from "jspdf"
 import html2canvas from 'html2canvas'
 import Editor from '@/components/editor'
 
-const editor1 = ref(null)
+let editor1 = ref(null)
 const downloadPdf = () => {
   const editorHtml = editor1.value.getEditorHtml()
 

@@ -3,9 +3,9 @@
 
 # Tech Stack
 - Vue3 
-- Tiptap
-- jspdf
-- html2canvas
+- 에디터 (Tiptap)
+- pdf 다운로드 (jspdf, html2canvas)
+- 공동 편집 (@tiptap/extension-collaboration, yjs, @hocuspocus/provider)
 
 # Script
 ```
@@ -18,3 +18,5 @@ npm run serve
 # Page
 
 ![](public/editor.png)
+
+![](public/collaboration.png)
