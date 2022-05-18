@@ -20,3 +20,5 @@ npm run serve
 ![](public/editor.png)
 
 ![](public/collaboration.png)
+
+![](public/collaboration2.png)
