@@ -11,11 +11,6 @@ import vClickOutside from "click-outside-vue3"
 
 const app = createApp(App);
 
-// socket io
-import io from 'socket.io-client'
-const socket = io(process.env.VUE_APP_API_URL)
-app.provide('socket', socket)
-
 // 메시지
 import message from '@/plugins/message'
 app.provide('msg', message)

@@ -2,11 +2,11 @@
 import { ref } from "vue"
 import { jsPDF } from "jspdf"
 import html2canvas from 'html2canvas'
-import Editor from '@/components/tiptap/Editor.vue'
+import Editor from '@/components/editor'
 
-const editor = ref()
+const editor1 = ref(null)
 const downloadPdf = () => {
-  const editorHtml = editor.value.getEditorHtml()
+  const editorHtml = editor1.value.getEditorHtml()
 
   html2canvas(editorHtml).then(canvas => {
     const imgData = canvas.toDataURL('image/png');
@@ -40,5 +40,5 @@ const downloadPdf = () => {
     </div>
   </div>
 
-  <editor ref="editor"/>
+  <editor ref="editor1"/>
 </template>
